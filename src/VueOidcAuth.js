@@ -212,6 +212,9 @@ export function createOidcAuth(
       },
       userProfile() {
         return !!this.user && !this.user.expired ? this.user.profile : {}
+      },
+      getUser(){
+        return !!this.user && !this.user.expired ? this.user : {}
       }
     },
     methods: {
